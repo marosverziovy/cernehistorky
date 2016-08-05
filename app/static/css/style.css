@@ -9,6 +9,15 @@
     background-color: #fff!important;
 }
 
+.alert-danger a{
+    color: #a94442;
+    text-decoration: underline;
+}
+
+.alert-danger a:hover {
+    text-decoration: none;
+}
+
 .navbar-nav>li>a {
     font-size: 1.2em;
 }
