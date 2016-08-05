@@ -36,10 +36,9 @@
 
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li {% if "/index" == request.path %} class="active"{% endif %}><a href="{{ url_for(".index") }}">Úvod <span class="sr-only">(current)</span></a></li>
-                    <li {% if "/rules" == request.path %} class="active"{% endif %}><a href="{{ url_for(".rules") }}">Pravidlá</a></li>
+                    <li {% if "/" == request.path or "/index" == request.path %} class="active"{% endif %}><a href="{{ url_for(".index") }}">Karty</a></li>
                     <li {% if "/about" == request.path %} class="active"{% endif %}><a href="{{ url_for(".about") }}">O hre</a></li>
-                    <li {% if "/cards" in request.path %} class="active"{% endif %}><a href="{{ url_for(".listcards") }}">Karty</a></li>
+                    <li {% if "/rules" == request.path %} class="active"{% endif %}><a href="{{ url_for(".rules") }}">Pravidlá</a></li>
                 </ul>
             </div>
         </div>
