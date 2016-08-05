@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Černé historky</title>
+        <title>{% if self.title() %}{% block title %}{% endblock %} - {% endif %} Černé historky</title>
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
@@ -32,10 +33,7 @@
                 <a class="navbar-brand" href="#">Černé historky</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-
-
-
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right text-right">
                     <li {% if "/" == request.path or "/index" == request.path %} class="active"{% endif %}><a href="{{ url_for(".index") }}">Karty</a></li>
                     <li {% if "/about" == request.path %} class="active"{% endif %}><a href="{{ url_for(".about") }}">O hre</a></li>
                     <li {% if "/rules" == request.path %} class="active"{% endif %}><a href="{{ url_for(".rules") }}">Pravidlá</a></li>
