@@ -1,0 +1,21 @@
+.active {
+    border-bottom: 3px solid #DE1631;
+    color: #000!important;
+    font-weight: bold;
+}
+
+.active a {
+    background: green;
+}
+
+.navbar-brand {
+    border-bottom: 3px solid #DE1631;
+    color: #000!important;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar {
+    background: none;
+    border: none;
+}
