@@ -10,6 +10,11 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='img/favicon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='img/favicon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='img/favicon.png') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+        <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/favicon.png') }}">
     </head>
 <body>
     <div class="container">
@@ -27,13 +32,17 @@
                 <a class="navbar-brand" href="#">Černé historky</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="{{ url_for(".index") }}">Úvod <span class="sr-only">(current)</span></a></li>
-                <li><a href="{{ url_for(".about") }}">O hre</a></li>
-                <li><a href="{{ url_for(".rules") }}">Pravidlá</a></li>
-            </ul>
-            </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li {% if "/index" == request.path %} class="active"{% endif %}><a href="{{ url_for(".index") }}">Úvod <span class="sr-only">(current)</span></a></li>
+                    <li {% if "/rules" == request.path %} class="active"{% endif %}><a href="{{ url_for(".rules") }}">Pravidlá</a></li>
+                    <li {% if "/about" == request.path %} class="active"{% endif %}><a href="{{ url_for(".about") }}">O hre</a></li>
+                    <li {% if "/cards" in request.path %} class="active"{% endif %}><a href="{{ url_for(".listcards") }}">Karty</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
       {% block content %}{% endblock %}

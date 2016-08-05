@@ -4,8 +4,17 @@
     font-weight: bold;
 }
 
-.active a {
-    background: green;
+.active > a {
+    color: #000!important;
+    background-color: #fff!important;
+}
+
+.navbar-nav>li>a {
+    font-size: 1.2em;
+}
+
+#navbar {
+    padding-bottom: 40px;
 }
 
 .navbar-brand {
