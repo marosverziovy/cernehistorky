@@ -6,11 +6,15 @@ from app import app
 def page_not_found(e):
     return render_template('404.html'), 404
 
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template('403.html'), 403
 
+# pages
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("listcards.html")
 
 @app.route('/about')
 def about():
