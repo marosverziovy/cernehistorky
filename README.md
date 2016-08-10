@@ -3,7 +3,7 @@
 
 ## Installation
 ``` bash
-$ git pull git@github.com:marosverziovy/cernehistorky.git
+$ git clone git@github.com:marosverziovy/cernehistorky.git
 $ cd cernehistorky
 $ virtualenv flask
 $ source flask/bin/activate
