@@ -1,3 +1,25 @@
 ---
+sets:
+  - slug: ukazkovaverze
+    name: Ukázková verze
+  - slug: cernehistorky1
+    name: Černé historky 1
+  - slug: cernehistorky2
+    name: Černé historky 2
 
-obsazeno:
+cards:
+  - slug: 'obsazeno'
+    set: 'ukazkovaverze'
+    name: 'Obsazeno'
+    q_text: '{{ img }}<b>Žena zemřela</b>, protože příliš dlouho telefonovala.'
+    a_text: '<b>Tato žena</b> si nechala na svém autě vyměnit pneumatiky. Informace z dílny, že během motáže zapoměli utáhnout šrouby na kole se k ní však nemohla dostat, jelikož celou dobu telefonovala se svou přítelkyní.{{ img }}V první zatačce stratila nad vozidlem kontrolu a narazila do stromu.'
+    q_img: 'obsazeno-lice.png'
+    a_img: 'obsazeno-rub.png'
+
+  - slug: 'blikajici_predzvest'
+    set: 'cernehistorky1'
+    name: 'Blikající předzvěst'
+    q_text: '{{ img }}<b>Když světlo zablikalo</b>, věděl Štěpán, že přišel pozdě.'
+    a_text: '<b>Štěpán byl advokátem</b> muže odsouze- ného k smrti. Na poslední chvíli se mu podařilo dosáhnout jeho omilostnění, ale bohužel do věznice dorazil příliš pozdě.{{ img }}Světlo zablikalo ve chvíli, kdy spustili elektrické křeslo.'
+    q_img: 'blikajicipredzvest-lice.png'
+    a_img: 'blikajicipredzvest-rub.png'
