@@ -3,10 +3,10 @@
 
 ## Installation
 ``` bash
-$ git clone git@github.com:marosverziovy/cernehistorky.git
-$ cd cernehistorky
-$ virtualenv flask
-$ source flask/bin/activate
-$ pip install -r requirements.txt
-$ ./run.py
+git clone git@github.com:marosverziovy/cernehistorky.git
+cd cernehistorky
+virtualenv flask
+source flask/bin/activate
+pip install -r requirements.txt
+./run.py
 ```
