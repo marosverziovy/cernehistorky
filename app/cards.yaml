@@ -1,11 +1,11 @@
 ---
 sets:
-  - slug: ukazkovaverze
-    name: Ukázková verze
   - slug: cernehistorky1
     name: Černé historky 1
   - slug: cernehistorky2
     name: Černé historky 2
+  - slug: ukazkovaverze
+    name: Ukázková verze
 
 cards:
   - slug: 'obsazeno'
