@@ -55,8 +55,15 @@ a.navbar-brand {
     border: none;
 }
 
+
 .navbar-nav {
-    padding-right: 85px;
+    padding-right: 0px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        padding-right: 85px;
+    }
 }
 
 .playcard {
