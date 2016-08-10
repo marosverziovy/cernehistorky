@@ -1,5 +1,15 @@
 from flask import render_template
 from app import app
+import yaml
+
+with open("cards.yaml", "r") as file:
+    f = yaml.load(file)
+
+version = 'v0.0.1'
+
+@app.context_processor
+def inject_version():
+    return dict(version=version)
 
 # errors
 @app.errorhandler(404)
@@ -13,8 +23,10 @@ def forbidden(e):
 # pages
 @app.route('/')
 @app.route('/index')
+@app.route('/cards')
 def index():
-    return render_template("listcards.html")
+    return render_template("listcards.html",
+                           f=f)
 
 @app.route('/about')
 def about():
@@ -24,11 +36,8 @@ def about():
 def rules():
     return render_template("rules.html")
 
-@app.route('/cards')
-def listcards():
-    return render_template("listcards.html")
-
 @app.route('/cards/<name>')
 def playcards(name):
     return render_template("playcard.html",
-                           name=name)
+                           f=f,
+                           page=name)
