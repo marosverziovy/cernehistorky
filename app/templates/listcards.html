@@ -30,7 +30,7 @@
             {% if tab['slug'] == card['set'] %}
             <tr>
                 <td><a href="{{ url_for('.playcards', name=card['slug']) }}">{{ card["name"] }}</a></td>
-                <td>{{ card["q_text"]|striptags }}</td>
+                <td>{{ card["q_text"]|striptags|replace('{{ img }}', '') }}</td>
             </tr>
             {% endif %}
             {% endfor %}
