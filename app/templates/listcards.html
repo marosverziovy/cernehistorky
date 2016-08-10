@@ -6,5 +6,39 @@
     <strong>Varovanie!</strong> Pre najlepší zážitok z hry si najprv prečítaj <a href="{{ url_for(".rules") }}">pravidlá</a>.
 </div>
 
-<h2>listcards</h2>
+<h2>Zoznam kariet</h2>
+
+<div>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    {% for tab in f["sets"] %}
+    <li class="{% if loop.first %}active{% endif %}" role="presentation" ><a href="#{{ tab["slug"] }}" aria-controls="{{ tab["name"]|urlize }}" role="tab" data-toggle="tab">{{ tab["name"] }}</a></li>{% endfor %}
+</ul>
+
+
+<div class="tab-content">
+    {% for tab in f["sets"] %}
+    <div role="tabpanel" class="tab-pane {% if loop.first %}active{% endif %}" id="{{ tab["slug"] }}">
+
+        <table class="table">
+            <tr>
+                <th class="col-md-4">Názov</th>
+                <th>Záhada</th>
+            </tr>
+            {% for card in f["cards"] %}
+            {% if tab['slug'] == card['set'] %}
+            <tr>
+                <td><a href="{{ url_for('.playcards', name=card['slug']) }}">{{ card["name"] }}</a></td>
+                <td>{{ card["q_text"]|striptags }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+
+    </div>
+    {% endfor %}
+</div>
+
+</div>
 {% endblock %}
