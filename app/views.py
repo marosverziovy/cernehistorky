@@ -2,7 +2,7 @@ from flask import render_template
 from app import app
 import yaml
 
-with open("cards.yaml", "r") as file:
+with open(os.getcwd() + "/app/cards.yaml", "r") as file:
     f = yaml.load(file)
 
 version = 'v0.0.1'
